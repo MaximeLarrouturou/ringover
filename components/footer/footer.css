@@ -1,0 +1,25 @@
+.flex-footer {
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+  }
+
+  .flex-footer > div {
+    width: 100px;
+    text-align: left;
+    margin: 10px;
+    padding: 20px;
+  }
+  .flex-footer > div > h3{
+      color:#2D5380;
+  }
+  .flex-footer > div > p{
+      color:#2D5380;
+  }
+
+  .follow{
+    text-align: right;
+  }
