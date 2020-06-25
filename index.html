@@ -12,17 +12,18 @@
 </head>
 
 <body>
-  <ul style="z-index: 2;" class="topnav navdisplay">
-    <li><a href="./index.html">Ressources</a></li>
-    <li><a href="#apropos">Partenaires</a></li>
-    <li><a href="./templates/projets.html">Tarifs</a></li>
-    <li><a href="#presses">Utilisations</a></li>
-    <li><a href="#contact">Produits</a></li>
-    <li style="float:left"><img src="./src/nav/logo-ringover-full-line.svg" /></li>
-  </ul>
 
-  <!--nav-->
-  <!--caroussel-->
+  <div id="navbar">
+    <a href="#default" id="logo"><img src="./src/nav/logo-ringover-full-line.svg" /></a>
+    <div id="navbar-right">
+      <a href="#ressources">Ressources</a>
+      <a href="#partenaires">Partenaires</a>
+      <a href="#tarifs">Tarifs</a>
+      <a href="#utilisations">Utilisations</a>
+      <a href="#produits">Produits</a>
+    </div>
+  </div>
+
   <div class="flex-container wrap">
     <div>
       <img class="absolute" src="./src/alpha.svg" />
@@ -38,7 +39,7 @@
       </h1>
       <p>En 1 clic, ouvrez gratuitement une salle de réunion virtuelle depuis n'importe quel support, sans
         téléchargement et sans aucune donnée personnelle à renseigner.</p>
-      <a href="#"><button class="button">Démarrer une visioconférence</button></a>
+      <a href="#"><button class="button-secondary">Démarrer une visioconférence</button></a>
     </div>
   </div>
   <div class="flex-container tiny-height center padding">
@@ -48,7 +49,6 @@
     </div>
   </div>
 
-  <!--right-->
   <div class="flex-container">
     <div class="padding fullsize wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.6s">
       <h2 class="secondary">Organisez des réunions en visioconférence depuis n’importe quel support</h2>
@@ -59,8 +59,7 @@
       <img src="https://www.ringover.com/img/videoconference-multidevices.png" />
     </div>
   </div>
-  <!--right-->
-  <!--left-->
+
   <div class="flex-container">
     <div class="fullsize wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.6s">
       <img src="https://www.ringover.com/img/videoconference-screensharing.png" />
@@ -72,13 +71,13 @@
         réunions et facilite la collaboration.</p>
     </div>
   </div>
-  <!--left-->
+
   <div class="flex-container colorbg">
     <div class="padding fullsize wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.6s">
       <h2 class="white">Un service gratuit</h2>
       <p class="fiftywidth white">Meet by Ringover est disponible gratuitement sans aucune limitation sur la durée de
         vos visioconférences et le nombre de participants..</p>
-      <a href="#"><button class="button">Démarrer une visioconférence</button></a>
+      <a href="#"><button class="button-secondary">Démarrer une visioconférence</button></a>
     </div>
     <div class="fullsize absolute absolutesize wow fadeIn" data-wow-duration="1s" data-wow-delay="0.8s">
       <img src="https://www.ringover.com/img/videoconference-banner.png" />
@@ -90,7 +89,6 @@
     </div>
   </div>
 
-  <!--right-->
   <div class="flex-container">
     <div class="padding fullsize wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.6s">
       <h2 class="secondary">Pas de logiciel à télécharger</h2>
@@ -107,28 +105,25 @@
       <img src="https://www.ringover.com/img/videoconference-signin-free.png" />
     </div>
   </div>
-  <!--right-->
-  <!--testimonial-->
+
   <div class="flex-container vertical center grey medium-padding">
-    <h2 class="black small-padding">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+    <h3 class="primary small-padding">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
       incididunt ut
       labore
-    </h2><img src="./src/home/user.png" />
-    <p>Nemo enim ipsam</p>
+    </h3><img src="./src/home/user.png" />
+    <p class="secondary">Nemo enim ipsam</p>
   </div>
-  <!--testimonial-->
-  <!--event-->
+
   <div class="flex-container padding">
     <div style="flex-grow: 1">
       <h3 class="primary">Simplifiez dès maintenant
         votre téléphonie d’entreprise</h3>
     </div>
     <div style="flex-grow: 1">
-      <button class="button">Essai gratuit</button>
+      <button class="button-primary">Essai gratuit</button>
     </div>
   </div>
-  <!--event-->
-  <!--footer-->
+
   <div class="flex-footer grey">
     <div style="flex-grow: 8">
       <img src="./src/nav/logo-ringover-full-line.svg" />
@@ -159,19 +154,39 @@
       <p>© ringover</p>
     </div>
     <div style="flex-grow: 2">
-      <div class="dropdown">
-        <button class="dropbtn"><img src="https://www.ringover.com/img/home2/footer-fr.svg" />Français</button>
-        <div class="dropdown-content">
-          <li><a href="#contact">Contact</a></li>
-        </div>
+      <div>
+          <ul>
+            <li><a href="#" aria-haspopup="true"><img src="https://www.ringover.com/img/home2/footer-fr.svg" />Français</a>
+              <ul class="dropdown" aria-label="submenu">
+                <li><a href="#">Sub-1</a></li>
+                <li><a href="#">Sub-2</a></li>
+                <li><a href="#">Sub-3</a></li>
+              </ul>
+            </li>
+          </ul>
       </div>
     </div>
   </div>
-  <!--footer-->
 </body>
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
 <script src="./js/wow.js" type="text/javascript"></script>
+<script>
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+    document.getElementById("navbar").style.padding = "20px 10px";
+    document.getElementById("navbar").style.backgroundColor = "#f1f1f1";
+    document.getElementById("logo").style.fontSize = "25px";
+  } else {
+    document.getElementById("navbar").style.padding = "40px 10px";
+    document.getElementById("navbar").style.backgroundColor = "rgba(255, 0, 0, 0)";
+    document.getElementById("logo").style.fontSize = "35px";
+  } 
+}
+</script>
 <script>
   var wow = new WOW(
     {

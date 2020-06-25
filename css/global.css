@@ -20,12 +20,28 @@ h3 {
 p {
     line-height: 27px;
 }
-a{
-  text-decoration: none;
-  color: #ffffff;
-}
 
-.button {
+
+.button-primary {
+  background-image: linear-gradient(99deg, rgba(255,255,255,0), #ff8954);
+  background-color: #ffcf4f;
+    border: none;
+    border-radius: 3px;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+  
+  .button-primary:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  }
+.button-secondary {
     background-color: #16AFBA; /* Green */
     border: none;
     border-radius: 3px;
@@ -40,7 +56,7 @@ a{
     cursor: pointer;
   }
   
-  .button:hover {
+  .button-secondary:hover {
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
   }
 
@@ -98,7 +114,8 @@ a{
     padding:110px;
   }
   .medium-padding{
-  padding:60px;}
+  padding:60px;
+}
   .grey{
     background-color: #F6F8F9;
   }
@@ -124,6 +141,68 @@ a{
   .absolutesize{
     right: 40px;
     width: 50%;
+  }
+  a {
+    text-decoration: none;
+  }
+  
+  nav {
+      font-family: monospace;
+  }
+  
+  ul {
+      list-style: none;
+      margin: 0;
+      padding-left: 0;
+  }
+  
+  li {
+      color: #2D5380;
+      display: block;
+      float: left;
+      padding: 1rem;
+      position: relative;
+      text-decoration: none;
+    transition-duration: 0.5s;
+  }
+    
+  li a {
+    color: #2D5380;
+  }
+  
+  li:hover,
+  li:focus-within {
+      cursor: pointer;
+  }
+  
+  li:focus-within a {
+    outline: none;
+  }
+  
+  ul li ul {
+      background: orange;
+      visibility: hidden;
+    opacity: 0;
+    min-width: 5rem;
+      position: absolute;
+    transition: all 0.5s ease;
+    margin-top: 1rem;
+      left: 0;
+    display: none;
+  }
+  
+  ul li:hover > ul,
+  ul li:focus-within > ul,
+  ul li ul:hover,
+  ul li ul:focus {
+     visibility: visible;
+     opacity: 1;
+     display: block;
+  }
+  
+  ul li ul li {
+      clear: both;
+    width: 100%;
   }
 
 @media (max-width: 600px) {
