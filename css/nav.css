@@ -15,12 +15,9 @@
 #navbar a {
   float: left;
   text-align: center;
-  padding: 20px;
-  margin-right: 20px;
+  padding: 10px;
+  margin-right: 10px;
   text-decoration: none;
-  font-size: 18px;
-  line-height: 25px;
-  border-radius: 4px;
   font-size: 15px;
 }
 
@@ -33,7 +30,20 @@
 /* Display some links to the right */
 #navbar-right {
   float: right;
-  margin-right: 30px;
+  margin-right: 40px;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+}
+
+.sav{
+  cursor: pointer;
+  background-color: #74d1d8;
+  color:#ffffff;
+  font-weight: 700;
+  transition: all .2s linear;
+  font-size: 13px;
+  border-radius: 50px !important;
 }
 
 /* Add responsiveness - on screens less than 580px wide, display the navbar vertically instead of horizontally */
