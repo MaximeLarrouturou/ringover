@@ -20,6 +20,9 @@ h3 {
 p {
     line-height: 27px;
 }
+.font-xs{
+  font-size: 10px;
+}
 
 
 .button-primary {
@@ -145,6 +148,11 @@ p {
   a {
     text-decoration: none;
     color: unset;
+  }
+
+  .flag{
+    border-radius: 50px;
+    vertical-align: middle;
   }
   
   nav {
