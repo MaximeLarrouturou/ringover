@@ -13,7 +13,7 @@
 
 <body>
 
-  <div id="navbar">
+  <div class="display" id="navbar">
     <a href="#default" id="logo"><img src="./src/nav/logo-ringover-full-line.svg" /></a>
     <div id="navbar-right">
       <a href="#produits">Produits</a>
@@ -28,8 +28,21 @@
     </div>
   </div>
 
-  <div class="flex-container wrap">
-    <div>
+  <div class="topnav display-nav" id="myTopnav">
+    <a class="active" href="#default" id="logo"><img src="./src/nav/logo-ringover-full-line.svg" /></a>
+    <a href="#produits">Produits</a>
+      <a href="#utilisations">Utilisations</a>
+      <a href="#tarifs">Tarifs</a>
+      <a href="#partenaires">Partenaires</a>
+      <a href="#ressources">Ressources</a>
+      <a class="sav" href="#sav">
+        <img src="https://www.ringover.com/img/home2/phone.svg" alt="phone" width="14"> +33 1 84 800 800</a>
+      <a href="#connexion">Connexion</a>
+    <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+  </div>
+
+  <div class="flex-container wrap padding-mobile">
+    <div class="display">
       <img class="absolute" src="./src/alpha.svg" />
       <video class="fullsize" autoplay muted loop>
         <source src="./src/production ID_4053047.mp4" type="video/mp4">
@@ -91,7 +104,7 @@
       <a href="#"><button class="button-secondary wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.5s">Démarrer
           une visioconférence</button></a>
     </div>
-    <div class="fullsize absolute absolutesize wow fadeIn" data-wow-duration="1s" data-wow-delay="0.6s">
+    <div class="fullsize absolute absolutesize display wow fadeIn" data-wow-duration="1s" data-wow-delay="0.6s">
       <img src="https://www.ringover.com/img/videoconference-banner.png" />
     </div>
   </div>
@@ -176,6 +189,16 @@
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
 <script src="./js/wow.js" type="text/javascript"></script>
+<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
 <script>
 
   window.onscroll = function () { scrollFunction() };

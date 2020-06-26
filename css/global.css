@@ -217,6 +217,10 @@ p {
     width: 100%;
   }
 
+  .display-nav{
+    display:none;
+  }
+
 @media (max-width: 600px) {
 
     h1 {
@@ -224,19 +228,17 @@ p {
         line-height: 25px;
     }
     h2 {
+        font-size:22px;
+        line-height: 25px;
+    }
+    h3 {
         font-size:16px;
         line-height: 25px;
     }
-    .white{
-      width:auto;  
-      text-align: center;
-      color:#ffffff;
-    }
-    .black{
-      width:auto;  
-      text-align: center;
-      color:#000000;
-    }
+
+.fiftywidth{
+  width:100%;
+}
     .tiny-height{
       height:auto;
     }
@@ -246,8 +248,8 @@ p {
     .medium-height{
       height:auto;
     }
-    .button{
-      margin-bottom:40px;
+    .medium-width{
+      width: 100%;
     }
     .flex-container {
       flex-wrap: wrap;
@@ -256,11 +258,23 @@ p {
         flex: 100%;
         max-width: 100%;
     }
-    .follow{
-        text-align: left;
-    }
     .flex-nav > div {
       flex: 100%;
       max-width: 100%;
+    }
+    .padding{
+      padding:20px;
+    }
+    .padding-mobile{
+      padding:20px;
+    }
+    .absolute{
+      display: contents;
+    }
+    .display{
+      display:none;
+    }
+    .display-nav{
+      display: block;
     }
   }
